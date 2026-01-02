@@ -5,13 +5,25 @@ import home3 from './home3.js';
 const buttons = document.querySelectorAll("nav button");
 const content = document.querySelector("#content");
 
-function initPage() {
-    content.textContent = "Starting page";
+function init(){
+    content.textContent = "";
 }
-initPage();
 
-buttons[0].addEventListener("click", initPage)
+function home1(){
+    const headline = document.createElement("h1");
+    headline.textContent = "Homepage"
+    headline.classList.add("headline");
+    content.appendChild(headline);
 
-buttons[1].addEventListener("click", home2)
+    const text = document.createElement("p");
+    text.textContent = "My restaurant is the best muahahahaha";
+    text.classList.add("text");
+    content.appendChild(text)
+}
+home1();
 
-buttons[2].addEventListener("click", home3)
+buttons[0].addEventListener("click", () => {init();home1()})
+
+buttons[1].addEventListener("click", () => {init();home2()})
+
+buttons[2].addEventListener("click", () => {init();home3()})
