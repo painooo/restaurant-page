@@ -1,6 +1,6 @@
 import './styles.css';
 import menu from './menu.js';
-import home3 from './home3.js';
+import about from './about.js';
 
 const buttons = document.querySelectorAll("nav button");
 const content = document.querySelector("#content");
@@ -26,4 +26,4 @@ buttons[0].addEventListener("click", () => {init();home1()})
 
 buttons[1].addEventListener("click", () => {init();menu()})
 
-buttons[2].addEventListener("click", () => {init();home3()})
+buttons[2].addEventListener("click", () => {init();about()})
